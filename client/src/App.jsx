@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes, Link, useNavigate } from 'react-router-dom';
 import logo from './assets/final.png';
 import { Home, Post } from './pages';
-import Login from './pages/login';
+import Login from './pages/Login';
 import Signup from './pages/Signup';
 import { useAuth } from './context/AuthContext';
 import PrivateRoute from './components/PrivateRoute';

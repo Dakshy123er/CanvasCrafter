@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { FormField, Loader } from '../components';
 import { getRandomPrompt } from '../constants';
 import { useAuth } from '../context/AuthContext';
-
+const BASE_URL = "https://canvascrafter-oezs.onrender.com";
 
 const Post = () => {
   const { user } = useAuth();
@@ -45,7 +45,7 @@ const Post = () => {
       setLoading(true);
       const token = localStorage.getItem('token');
 
-      const response = await fetch('http://localhost:8080/api/v1/post', {
+      const response = await fetch(`${BASE_URL}/api/v1/post`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

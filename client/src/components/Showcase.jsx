@@ -52,7 +52,7 @@ const Showcase = () => {
     if (!confirm) return;
 
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/post/${id}`, {
+      const response = await fetch(`${BASE_URL}/api/v1/post/${id}`, {
         method: 'DELETE',
       });
 

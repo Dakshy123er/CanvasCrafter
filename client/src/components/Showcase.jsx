@@ -3,6 +3,7 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import showcaseAnim from '../assets/showcase-anim.json';
 import { FormField, Card, Loader } from '../components';
 import { motion } from 'framer-motion';
+const BASE_URL = "https://canvascrafter-oezs.onrender.com";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -19,7 +20,8 @@ const Showcase = () => {
     const fetchPosts = async () => {
       setLoading(true);
       try {
-        const res = await fetch('http://localhost:8080/api/v1/post');
+        const res = await fetch(`${BASE_URL}/api/v1/post`);
+
         const result = await res.json();
 
         if (res.ok) {

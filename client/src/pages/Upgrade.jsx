@@ -29,7 +29,7 @@ const Upgrade = () => {
         description: 'Upgrade to Premium',
         order_id: order.id,
         handler: async function (response) {
-          const verifyRes = await fetch('http://localhost:8080/api/v1/payments/verify-payment', {
+          const verifyRes = await fetch(`${BASE_URL}/api/v1/payments/verify-payment`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

@@ -22,7 +22,7 @@ const Upgrade = () => {
       const order = await res.json();
 
       const options = {
-        key: 'rzp_test_ZUViIrRVIMqOVm', // replace this
+        key: 'rzp_test_OBVc0PXKBgWUQC', // replace this
         amount: order.amount,
         currency: order.currency,
         name: 'AI Image Generator',

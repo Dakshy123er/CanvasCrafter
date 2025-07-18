@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+const BASE_URL = "https://canvascrafter-oezs.onrender.com";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const Signup = () => {
   setLoading(true);
 
   try {
-    const response = await fetch('http://localhost:8080/api/v1/auth/signup', {
+    const response = await fetch(`${BASE_URL}/api/v1/auth/signup`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

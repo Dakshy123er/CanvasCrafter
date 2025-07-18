@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-
+const BASE_URL = "https://canvascrafter-oezs.onrender.com";
 const VerifyCode = () => {
   const [code, setCode] = useState('');
   const [email, setEmail] = useState('');
@@ -11,7 +11,7 @@ const VerifyCode = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:8080/api/v1/auth/verify-code', {
+      const res = await fetch(`${BASE_URL}/api/v1/auth/verify-code`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, code }),

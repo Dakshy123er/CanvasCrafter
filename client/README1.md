@@ -1,6 +1,10 @@
-# 🎨 AI Image Generator
+# 🎨 CanvasCrafter – AI Image Generator App
 
-A full-stack AI image generation web app using **REPLICATE API**, built with **React.js**, **Node.js**, **Express**, and **MongoDB**.
+CanvasCrafter is a full-stack AI image generation app using Replicate API, allowing users to generate and post AI art. It includes features like authentication, usage-based limits, payments, and email verification.
+
+## 🚀 Live Demo
+Frontend: [canvas-crafter.vercel.app](https://canvas-crafter-chi.vercel.app)  
+Backend: [Render API](https://canvascrafter-oezs.onrender.com)
 
 ## 🌟 Features
 
@@ -11,22 +15,16 @@ A full-stack AI image generation web app using **REPLICATE API**, built with **R
 - 📥 Image download and post history
 - ✉️ Email verification with OTP for signup
 - 🖌️ Clean, responsive UI with TailwindCSS and Framer Motion
+- - 🐢 Cold start handled using UptimeRobot (Render)
 
-## 🧠 Tech Stack
+## 🛠️ Tech Stack
 
-**Frontend:**
-- HTML
-- React.js
-- Tailwind CSS
-- Framer Motion
-
-**Backend:**
-- Node.js + Express.js
-- MongoDB + Mongoose
-- JWT Authentication
-- Nodemailer (Email OTP)
-- Razorpay (Payments)
-- Replicate API
+- **Frontend**: HTML,React.js, Tailwind CSS, Framer Motion
+- **Backend**: Node.js, Express, MongoDB, JWT
+- **Authentication**: JWT, Email OTP Verification(Nodemailer)
+- **Payment Gateway**: Razorpay
+- **AI Image Generation**: Replicate API
+- **Deployment**: Vercel (Frontend), Render (Backend)
 
 ## 🛠️ Setup Instructions
 
@@ -46,9 +44,8 @@ cd ../client && npm install
 cd server && npm start
 cd ../client && npm start
 
+#Also dont forget to make a .env file in your server folder with the name .env and add the environment variables present in .env.example
 
-## 🧪 Live Demo
-**https://canvas-crafter-chi.vercel.app/**
 
 
 

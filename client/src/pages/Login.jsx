@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-
+const BASE_URL = "https://canvascrafter-oezs.onrender.com";
 const Login = () => {
   const navigate = useNavigate();
   const { login } = useAuth();
@@ -25,10 +25,10 @@ const Login = () => {
 
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:8080/api/v1/auth/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+      const response = await fetch(`${BASE_URL}/api/v1/auth/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(form),
       });
 
       const result = await response.json();

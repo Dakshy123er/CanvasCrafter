@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
+const BASE_URL = "https://canvascrafter-oezs.onrender.com";
 
 const Upgrade = () => {
   const { user } = useAuth();
@@ -9,7 +10,7 @@ const Upgrade = () => {
     const token = localStorage.getItem('token');
 
     try {
-      const res = await fetch('http://localhost:8080/api/v1/payments/create-order', {
+      const res = await fetch(`${BASE_URL}/api/v1/payments/create-order`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
